@@ -1,0 +1,6289 @@
+Model {
+  Name			  "ALS_freq3v3_test"
+  Version		  7.3
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    29
+    Inport {
+      Name		      "f_IR_psl"
+    }
+    Inport {
+      Name		      "u_VCO_psl"
+    }
+    Inport {
+      Name		      "u_AOM"
+    }
+    Inport {
+      Name		      "f_IR_ex"
+    }
+    Inport {
+      Name		      "u_VCO_ex"
+    }
+    Inport {
+      Name		      "f_FiberNoise"
+    }
+    Inport {
+      Name		      "u_TTFSS_test"
+    }
+    Inport {
+      Name		      "PLL Test Input"
+    }
+    Inport {
+      Name		      "PDH Test Input"
+    }
+    Inport {
+      Name		      "u_PDH_test"
+    }
+    Inport {
+      Name		      "u_CommMode_test1"
+    }
+    Inport {
+      Name		      "CommMode Test Input1"
+    }
+    Inport {
+      Name		      "Comm Arm Cav Offset"
+    }
+    Inport {
+      Name		      "Diff Arm Cav Offset"
+    }
+    Inport {
+      Name		      "u_Diff ETMx_test in"
+    }
+    Inport {
+      Name		      "u_Diff ETMx_test in1"
+    }
+    Inport {
+      Name		      "GRN X-arm Cavity Resonance Frequency"
+    }
+    Inport {
+      Name		      "FSS Test Input1"
+    }
+    Inport {
+      Name		      "u_FSS_test1"
+    }
+    Inport {
+      Name		      "u_Diff ETMx_test in2"
+    }
+    Inport {
+      Name		      "Y-Arm Transm itted GRN Frequency"
+    }
+    Inport {
+      Name		      "GRN X-arm Cavity Resonance Freq"
+    }
+    Inport {
+      Name		      "RefCav PDH Frequency Noise Input"
+    }
+    Inport {
+      Name		      "Local PDH Frequenoise Input"
+    }
+    Inport {
+      Name		      "f_VCO_ex"
+    }
+    Inport {
+      Name		      "f_VCO_psl"
+    }
+    Inport {
+      Name		      "f_VCO_AOM"
+    }
+    Inport {
+      Name		      "f_VCO_comm"
+    }
+    Inport {
+      Name		      "f_VCO_diff"
+    }
+    NumRootOutports	    36
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_GRN_psl"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_IR_fiber"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "TTFSS error signal"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_IR_ex_offset"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "TTFSS Feedback"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "TTFSS error signal1"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_GRN_ex"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "PDH Feedback"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "PDH error signal2"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "PDH error signal1"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Comm Mode error signal2"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Comm Mode Feedback"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Comm Mode error signal1"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Error Siganl Diff ETM feedback"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Feedback to ETMx"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Feedback to ETMy"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Diff ETMx error signal2"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Diff ETMx error signal1"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Diff ETMx Feedback"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "FSS Feedback1"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "FSS error signal3"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "FSS error signal4"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Feedback to ETMs"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "TM displacement"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Arm Cavity Frequeny Fluctuation1"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Arm Cavity Frequeny Fluctuation2"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "0.5*f_VCO,EX"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_VCO,EX + f_PSL"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_AOM"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_VCO,PSL"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_VCO,EX"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_VCO,COMM"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_VCO,DIFF"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_COMM_SHIFT"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_DIFF_SHIFT"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "f_ArmCav_Shift"
+    }
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.215"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "ISO-8859-1"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  Created		  "Mon May 10 12:26:20 2010"
+  Creator		  "slagmolen"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "slagmolen"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Jul 13 15:20:48 2010"
+  RTWModifiedTimeStamp	  200935241
+  ModelVersionFormat	  "1.%<AutoIncrement:215>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.6.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.6.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SignalSizeVariationType "Allow only fixed size"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.6.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.6.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.6.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.6.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.6.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Diagnostics"
+      ConfigPrmDlgPosition    " [ 265, -756, 1145, -126 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "fixdt(1,16,0)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+      DimensionsMode	      "auto"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+      DimensionsMode	      "auto"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Step
+      Time		      "1"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutputVariableDimensions off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      TransferFcn
+      Numerator		      "[1]"
+      Denominator	      "[1 2 1]"
+      AbsoluteTolerance	      "auto"
+      ContinuousStateAttributes	"''"
+      Realization	      "auto"
+    }
+  }
+  System {
+    Name		    "ALS_freq3v3_test"
+    Location		    [386, 76, 1886, 1121]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    on
+    ZoomFactor		    "82"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Inport
+      Name		      "f_IR_psl"
+      Position		      [230, 88, 260, 102]
+      ForegroundColor	      "red"
+      BackgroundColor	      "green"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_VCO_psl"
+      Position		      [115, 383, 145, 397]
+      ForegroundColor	      "magenta"
+      BackgroundColor	      "green"
+      Port		      "2"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_AOM"
+      Position		      [305, 503, 335, 517]
+      BackgroundColor	      "green"
+      Port		      "3"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "f_IR_ex"
+      Position		      [115, 753, 145, 767]
+      ForegroundColor	      "red"
+      BackgroundColor	      "green"
+      Port		      "4"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_VCO_ex"
+      Position		      [305, 883, 335, 897]
+      BackgroundColor	      "green"
+      Port		      "5"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "f_FiberNoise"
+      Position		      [305, 658, 335, 672]
+      BackgroundColor	      "green"
+      Port		      "6"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_TTFSS_test"
+      Position		      [1275, 998, 1305, 1012]
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      NamePlacement	      "alternate"
+      Port		      "7"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "PLL Test Input"
+      Position		      [305, 1008, 335, 1022]
+      BackgroundColor	      "green"
+      Port		      "8"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "PDH Test Input"
+      Position		      [380, 1098, 410, 1112]
+      BackgroundColor	      "green"
+      Port		      "9"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_PDH_test"
+      Position		      [772, 1040, 788, 1060]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      NamePlacement	      "alternate"
+      Port		      "10"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_CommMode_test1"
+      Position		      [437, 1530, 453, 1550]
+      BlockRotation	      270
+      BackgroundColor	      "green"
+      NamePlacement	      "alternate"
+      Port		      "11"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "CommMode Test Input1"
+      Position		      [150, 1338, 180, 1352]
+      BackgroundColor	      "green"
+      Port		      "12"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "Comm Arm Cav Offset"
+      Position		      [185, 1653, 215, 1667]
+      ForegroundColor	      "magenta"
+      BackgroundColor	      "green"
+      Port		      "13"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "Diff Arm Cav Offset"
+      Position		      [730, 1748, 760, 1762]
+      ForegroundColor	      "magenta"
+      BackgroundColor	      "green"
+      Port		      "14"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_Diff ETMx_test in"
+      Position		      [1527, 1660, 1543, 1680]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      Port		      "15"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_Diff ETMx_test in1"
+      Position		      [2062, 1285, 2078, 1305]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      NamePlacement	      "alternate"
+      Port		      "16"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "GRN X-arm Cavity\nResonance Frequency"
+      Position		      [1367, 1400, 1383, 1420]
+      BlockRotation	      270
+      BackgroundColor	      "green"
+      Port		      "17"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "FSS Test Input1"
+      Position		      [557, 175, 573, 190]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      NamePlacement	      "alternate"
+      Port		      "18"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_FSS_test1"
+      Position		      [902, 160, 918, 180]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      NamePlacement	      "alternate"
+      Port		      "19"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_Diff ETMx_test in2"
+      Position		      [1862, 1640, 1878, 1660]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      NamePlacement	      "alternate"
+      Port		      "20"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "Y-Arm Transm itted\nGRN Frequency"
+      Position		      [840, 1507, 860, 1523]
+      BackgroundColor	      "green"
+      Port		      "21"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "GRN X-arm Cavity\nResonance Freq"
+      Position		      [1447, 1095, 1463, 1115]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      Port		      "22"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "RefCav PDH Frequency Noise Input"
+      Position		      [1075, 332, 1095, 348]
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      NamePlacement	      "alternate"
+      Port		      "23"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "Local PDH Frequenoise Input"
+      Position		      [987, 1040, 1003, 1060]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "green"
+      NamePlacement	      "alternate"
+      Port		      "24"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "f_VCO_ex"
+      Position		      [590, 938, 620, 952]
+      BackgroundColor	      "green"
+      Port		      "25"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "f_VCO_psl"
+      Position		      [450, 418, 480, 432]
+      BackgroundColor	      "green"
+      Port		      "26"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "f_VCO_AOM"
+      Position		      [495, 553, 525, 567]
+      BackgroundColor	      "green"
+      Port		      "27"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "f_VCO_comm"
+      Position		      [375, 1703, 405, 1717]
+      BackgroundColor	      "green"
+      Port		      "28"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "f_VCO_diff"
+      Position		      [900, 1798, 930, 1812]
+      BackgroundColor	      "green"
+      Port		      "29"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      " Test1"
+      Ports		      [2, 1]
+      Position		      [2055, 1390, 2085, 1420]
+      BlockMirror	      on
+      ForegroundColor	      "magenta"
+      IconShape		      "round"
+      Inputs		      "+|+"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      " Test2"
+      Ports		      [2, 1]
+      Position		      [1360, 1280, 1390, 1310]
+      BlockMirror	      on
+      IconShape		      "round"
+      Inputs		      "|++"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "ALS AOM"
+      Ports		      [2, 1]
+      Position		      [1095, 387, 1125, 418]
+      ForegroundColor	      "red"
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "AOM Driver at fiber launch"
+      Ports		      [1, 1]
+      Position		      [425, 492, 520, 528]
+      ForegroundColor	      "magenta"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sys		      "AOM_Driver"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Arm Cavity\nTransmission"
+      Ports		      [2, 1]
+      Position		      [990, 1202, 1020, 1233]
+      BlockMirror	      on
+      ForegroundColor	      "green"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Arm Cavity\nTransmission1"
+      Ports		      [2, 1]
+      Position		      [940, 1077, 970, 1108]
+      BlockMirror	      on
+      ForegroundColor	      "blue"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Cavity Pole HPF\nArmCav1"
+      Position		      [1070, 1278, 1155, 1312]
+      BlockMirror	      on
+      ForegroundColor	      "green"
+      Numerator		      "[1 0]"
+      Denominator	      "[1 ArmCavPole]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Cavity Pole HPF\nRefCav"
+      Position		      [850, 431, 920, 469]
+      ForegroundColor	      "red"
+      Numerator		      "[1 0]"
+      Denominator	      "[1 RefCavPole]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Cavity Pole LPF\nArmCav1"
+      Position		      [1070, 1191, 1155, 1229]
+      BlockMirror	      on
+      ForegroundColor	      "green"
+      Numerator		      "[ArmCavPole]"
+      Denominator	      "[1 ArmCavPole]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Cavity Pole LPF\nArmCav2"
+      Position		      [1070, 1081, 1155, 1119]
+      BlockMirror	      on
+      ForegroundColor	      "green"
+      Numerator		      "[ArmCavPole]"
+      Denominator	      "[1 ArmCavPole]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Cavity Pole LPF\nRefCav"
+      Position		      [850, 364, 945, 406]
+      ForegroundColor	      "red"
+      Numerator		      "[RefCavPole]"
+      Denominator	      "[1 RefCavPole]"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Common Mode\nDemodulation"
+      Ports		      [2, 1]
+      Position		      [595, 1437, 625, 1468]
+      BlockMirror	      on
+      ForegroundColor	      "blue"
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Common Mode Servo"
+      Ports		      [1, 1]
+      Position		      [275, 1437, 390, 1473]
+      BlockMirror	      on
+      ForegroundColor	      "magenta"
+      BackgroundColor	      "gray"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sys		      "CommonMode_Servo"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [729, 120, 751, 135]
+      BlockRotation	      270
+      NamePlacement	      "alternate"
+      Value		      "2"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant2"
+      Position		      [707, 925, 733, 940]
+      BlockRotation	      270
+      Value		      "2"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Diff Y-Arm\nResponse"
+      Position		      [925, 1315, 955, 1345]
+      BlockRotation	      270
+      BlockMirror	      on
+      ForegroundColor	      "green"
+      NamePlacement	      "alternate"
+      Gain		      "-1"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      ParameterDataType	      "fixdt(1, 16)"
+      ParameterScaling	      "2^0"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Differential Mode\nDemodulation1"
+      Ports		      [2, 1]
+      Position		      [1260, 1732, 1290, 1763]
+      ForegroundColor	      "blue"
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Differential Mode Servo"
+      Ports		      [1, 1]
+      Position		      [1595, 1728, 1720, 1772]
+      ForegroundColor	      "magenta"
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sys		      "DifferentialMode_Servo"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Name		      "Divide"
+      Ports		      [2, 1]
+      Position		      [745, 882, 775, 913]
+      ForegroundColor	      "yellow"
+      Inputs		      "*/"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Doulbe Pass\nAOM"
+      Position		      [615, 375, 645, 405]
+      ForegroundColor	      "yellow"
+      Gain		      "2"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      ParameterDataType	      "fixdt(1, 16)"
+      ParameterScaling	      "2^0"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "ETMx Gain"
+      Position		      [1950, 1660, 2000, 1700]
+      ForegroundColor	      "magenta"
+      Gain		      "-0.5"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      ParameterDataType	      "fixdt(1, 16)"
+      ParameterScaling	      "2^0"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "ETMy Gain"
+      Position		      [1950, 1835, 2000, 1875]
+      Gain		      "+0.5"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      ParameterDataType	      "fixdt(1, 16)"
+      ParameterScaling	      "2^0"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "FSS AOM"
+      Ports		      [2, 1]
+      Position		      [675, 367, 705, 398]
+      ForegroundColor	      "red"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "FSS Servo"
+      Ports		      [1, 1]
+      Position		      [725, 203, 830, 237]
+      BlockMirror	      on
+      ForegroundColor	      "magenta"
+      BackgroundColor	      "gray"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sys		      "FSS_Servo"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Fiber Induced\nPhase Noise"
+      Ports		      [2, 1]
+      Position		      [495, 642, 525, 673]
+      ForegroundColor	      "lightBlue"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Frequency Doubler"
+      Position		      [1135, 1740, 1165, 1770]
+      ForegroundColor	      "yellow"
+      Gain		      "2"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      ParameterDataType	      "fixdt(1, 16)"
+      ParameterScaling	      "2^0"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Frequency To Phase\nin Fourier-space1"
+      Position		      [990, 762, 1050, 798]
+      ForegroundColor	      "yellow"
+      Numerator		      "[2*pi]"
+      Denominator	      "[1 0]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Frequency To Phase\nin Fourier-space3"
+      Position		      [770, 1202, 830, 1238]
+      BlockMirror	      on
+      ForegroundColor	      "green"
+      Numerator		      "[2*pi]"
+      Denominator	      "[1 0]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Frequency To Phase\nin Fourier-space4"
+      Position		      [810, 1372, 870, 1408]
+      BlockMirror	      on
+      ForegroundColor	      "green"
+      Numerator		      "[2*pi]"
+      Denominator	      "[1 0]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Frequency To Phase\nin Fourier-space5"
+      Position		      [500, 1437, 560, 1473]
+      BlockMirror	      on
+      ForegroundColor	      "blue"
+      NamePlacement	      "alternate"
+      Numerator		      "[2*pi]"
+      Denominator	      "[1 0]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Frequency To Phase\nin Fourier-space6"
+      Position		      [1035, 1497, 1095, 1533]
+      ForegroundColor	      "green"
+      Numerator		      "[2*pi]"
+      Denominator	      "[1 0]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Frequency To Phase\nin Fourier-space7"
+      Position		      [1360, 1732, 1420, 1768]
+      ForegroundColor	      "blue"
+      Numerator		      "[2*pi]"
+      Denominator	      "[1 0]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Frequency To Phase\nin Fourier-space8"
+      Position		      [965, 882, 1025, 918]
+      ForegroundColor	      "yellow"
+      Numerator		      "[2*pi]"
+      Denominator	      "[1 0]"
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground"
+      Position		      [765, 440, 785, 460]
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground1"
+      Position		      [680, 230, 700, 250]
+      BlockMirror	      on
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground2"
+      Position		      [535, 1045, 555, 1065]
+      BlockRotation	      270
+      NamePlacement	      "alternate"
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground3"
+      Position		      [535, 1145, 555, 1165]
+      BlockRotation	      270
+      NamePlacement	      "alternate"
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground4"
+      Position		      [245, 1490, 265, 1510]
+      BlockRotation	      270
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground5"
+      Position		      [1760, 1785, 1780, 1805]
+      BlockRotation	      270
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "LowNoiseVCO"
+      Ports		      [1, 1]
+      Position		      [350, 372, 445, 408]
+      ForegroundColor	      "magenta"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sys		      "LowNoiseVCO_psl"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "LowNoiseVCO, Comm"
+      Ports		      [1, 1]
+      Position		      [290, 1641, 405, 1679]
+      ForegroundColor	      "magenta"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sys		      "LowNoiseVCO_comm"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "LowNoiseVCO, Diff"
+      Ports		      [1, 1]
+      Position		      [825, 1738, 930, 1772]
+      ForegroundColor	      "magenta"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sys		      "LowNoiseVCO_diff"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "LowNoiseVCO, EX"
+      Ports		      [1, 1]
+      Position		      [515, 873, 620, 907]
+      ForegroundColor	      "magenta"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sys		      "LowNoiseVCO_local"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Optical\nHeterodyne Signal\nFiber Output + Local Laser"
+      Ports		      [2, 1]
+      Position		      [765, 747, 795, 778]
+      ForegroundColor	      "yellow"
+      BackgroundColor	      "gray"
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Optical\nHeterodyne Signal\nPSL + X-arm"
+      Ports		      [2, 1]
+      Position		      [675, 1367, 705, 1398]
+      BlockMirror	      on
+      ForegroundColor	      "yellow"
+      BackgroundColor	      "gray"
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Optical\nHeterodyne Signal\nX-arm + Y-arm"
+      Ports		      [2, 1]
+      Position		      [1170, 1552, 1200, 1583]
+      ForegroundColor	      "yellow"
+      BackgroundColor	      "gray"
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "PDH Frequency\nComparison"
+      Ports		      [2, 1]
+      Position		      [1360, 1192, 1390, 1223]
+      BlockMirror	      on
+      ForegroundColor	      "green"
+      BackgroundColor	      "yellow"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "PDH Servo"
+      Ports		      [1, 1]
+      Position		      [610, 1078, 715, 1112]
+      BlockMirror	      on
+      ForegroundColor	      "magenta"
+      BackgroundColor	      "gray"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sys		      "PDH_Servo"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "PSL Frequency Actuator"
+      Position		      [360, 201, 500, 259]
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      Gain		      "PSLfrequencyActuator"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      ParameterDataType	      "fixdt(1, 16)"
+      ParameterScaling	      "2^0"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Product
+      Name		      "Product"
+      Ports		      [2, 1]
+      Position		      [785, 87, 815, 118]
+      ForegroundColor	      "green"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Quad Suspension and Feedback"
+      Ports		      [16, 13]
+      Position		      [1660, 1094, 1860, 1541]
+      BlockMirror	      on
+      ForegroundColor	      "orange"
+      BackgroundColor	      "orange"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Quad Suspension and Feedback"
+	Location		[55, 82, 1384, 932]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Beamline - Ground"
+	  Position		  [210, 158, 240, 172]
+	  BackgroundColor	  "lightBlue"
+	  NamePlacement		  "alternate"
+	  FontSize		  14
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pitch - Ground"
+	  Position		  [170, 293, 200, 307]
+	  FontSize		  14
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "x-sensor noise"
+	  Position		  [230, 208, 260, 222]
+	  BackgroundColor	  "darkGreen"
+	  NamePlacement		  "alternate"
+	  FontSize		  14
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Force to Optic"
+	  Position		  [90, 268, 120, 282]
+	  BackgroundColor	  "lightBlue"
+	  NamePlacement		  "alternate"
+	  FontSize		  14
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Force to PUM"
+	  Position		  [175, 243, 205, 257]
+	  BackgroundColor	  "lightBlue"
+	  NamePlacement		  "alternate"
+	  FontSize		  14
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Force to UIM"
+	  Position		  [90, 218, 120, 232]
+	  BackgroundColor	  "lightBlue"
+	  NamePlacement		  "alternate"
+	  FontSize		  14
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pitch Torque on TM"
+	  Position		  [90, 433, 120, 447]
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  14
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Torque to PUM"
+	  Position		  [90, 398, 120, 412]
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  14
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Torque to UIM"
+	  Position		  [90, 363, 120, 377]
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  14
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Force to TOP"
+	  Position		  [230, 113, 260, 127]
+	  BackgroundColor	  "lightBlue"
+	  NamePlacement		  "alternate"
+	  FontSize		  14
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Ptorque on Top"
+	  Position		  [90, 323, 120, 337]
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  14
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "LSC Noise Input"
+	  Position		  [1120, 358, 1150, 372]
+	  BlockMirror		  on
+	  BackgroundColor	  "lightBlue"
+	  NamePlacement		  "alternate"
+	  FontSize		  14
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "OL PM Servo"
+	  Position		  [1085, 773, 1115, 787]
+	  BlockMirror		  on
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  14
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "OL UIM Servo"
+	  Position		  [1100, 668, 1130, 682]
+	  BlockMirror		  on
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  14
+	  Port			  "14"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "OL TM Servo"
+	  Position		  [1080, 898, 1110, 912]
+	  BlockMirror		  on
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  14
+	  Port			  "15"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "OL TOP Servo"
+	  Position		  [1100, 553, 1130, 567]
+	  BlockMirror		  on
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  14
+	  Port			  "16"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "F_PM"
+	  Ports			  [1]
+	  Position		  [390, 534, 420, 566]
+	  BlockMirror		  on
+	  Floating		  off
+	  Location		  [58, 106, 382, 357]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "10"
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "F_TM"
+	  Ports			  [1]
+	  Position		  [380, 643, 410, 677]
+	  BlockMirror		  on
+	  Floating		  off
+	  Location		  [356, 71, 772, 357]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "20"
+	  SaveName		  "ScopeData2"
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "F_UIM"
+	  Ports			  [1]
+	  Position		  [505, 69, 535, 101]
+	  BlockMirror		  on
+	  Floating		  off
+	  Location		  [377, 69, 701, 320]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "10"
+	  SaveName		  "ScopeData3"
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [515, 185, 545, 215]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  FontSize		  14
+	  Gain			  "-3.6"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  Position		  [415, 287, 445, 313]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  FontSize		  14
+	  Gain			  "-1.452e-2"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain10"
+	  Position		  [890, 534, 945, 586]
+	  Gain			  "preUIM"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  Position		  [950, 300, 1010, 330]
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  FontSize		  14
+	  Gain			  "gLP"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain3"
+	  Position		  [810, 490, 850, 540]
+	  BlockMirror		  on
+	  Gain			  "gTOP"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain4"
+	  Position		  [810, 602, 850, 648]
+	  BlockMirror		  on
+	  Gain			  "gUIM"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain5"
+	  Position		  [815, 706, 855, 754]
+	  BlockMirror		  on
+	  Gain			  "gPM"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain6"
+	  Position		  [957, 405, 1003, 445]
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  Gain			  "gALL"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain7"
+	  Position		  [890, 650, 950, 700]
+	  Gain			  "preUIM"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain8"
+	  Position		  [890, 753, 945, 807]
+	  Gain			  "prePM"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain9"
+	  Position		  [815, 816, 855, 854]
+	  BlockMirror		  on
+	  Gain			  "gTM"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LTI System"
+	  Ports			  [1, 1]
+	  Position		  [410, 186, 465, 214]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  FontSize		  14
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sys			  "ldamp"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LTI System1"
+	  Ports			  [1, 1]
+	  Position		  [315, 285, 375, 315]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  FontSize		  14
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sys			  "pdamp"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LTI System10"
+	  Ports			  [1, 1]
+	  Position		  [725, 609, 775, 641]
+	  BlockMirror		  on
+	  BackgroundColor	  "cyan"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sys			  "coUIM"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LTI System11"
+	  Ports			  [1, 1]
+	  Position		  [725, 715, 775, 745]
+	  BlockMirror		  on
+	  BackgroundColor	  "cyan"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sys			  "coPM"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LTI System2"
+	  Ports			  [1, 1]
+	  Position		  [895, 500, 960, 530]
+	  BlockMirror		  on
+	  BackgroundColor	  "cyan"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sys			  "ServoTOP"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LTI System3"
+	  Ports			  [1, 1]
+	  Position		  [890, 611, 960, 639]
+	  BlockMirror		  on
+	  BackgroundColor	  "cyan"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sys			  "ServoUIM"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LTI System4"
+	  Ports			  [1, 1]
+	  Position		  [730, 820, 775, 850]
+	  BlockMirror		  on
+	  BackgroundColor	  "cyan"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sys			  "coTM"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LTI System5"
+	  Ports			  [1, 1]
+	  Position		  [890, 820, 955, 850]
+	  BlockMirror		  on
+	  BackgroundColor	  "cyan"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sys			  "ServoTM"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LTI System7"
+	  Ports			  [1, 1]
+	  Position		  [895, 715, 960, 745]
+	  BlockMirror		  on
+	  BackgroundColor	  "cyan"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sys			  "ServoPM"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LTI System9"
+	  Ports			  [1, 1]
+	  Position		  [720, 500, 780, 530]
+	  BlockMirror		  on
+	  BackgroundColor	  "cyan"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sys			  "coTOP"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Optical\nSpring"
+	  Ports			  [1, 1]
+	  Position		  [270, 457, 355, 483]
+	  BlockMirror		  on
+	  BackgroundColor	  "cyan"
+	  FontSize		  14
+	  SourceBlock		  "cstblocks/LTI System"
+	  SourceType		  "LTI Block"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  sys			  "k_ospring"
+	  IC			  "[]"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "Step"
+	  Position		  [1120, 380, 1150, 410]
+	  BlockMirror		  on
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [3, 1]
+	  Position		  [330, 190, 370, 210]
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "+-+"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [270, 290, 290, 310]
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "|-+"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum10"
+	  Ports			  [2, 1]
+	  Position		  [465, 290, 485, 310]
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum11"
+	  Ports			  [2, 1]
+	  Position		  [520, 240, 540, 260]
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum12"
+	  Ports			  [2, 1]
+	  Position		  [540, 215, 560, 235]
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum13"
+	  Ports			  [2, 1]
+	  Position		  [970, 355, 990, 375]
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum14"
+	  Ports			  [2, 1]
+	  Position		  [980, 550, 1000, 570]
+	  BlockRotation		  270
+	  BackgroundColor	  "magenta"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "+|+"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum15"
+	  Ports			  [2, 1]
+	  Position		  [490, 265, 510, 285]
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum16"
+	  Ports			  [2, 1]
+	  Position		  [1045, 355, 1065, 375]
+	  BlockMirror		  on
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum17"
+	  Ports			  [2, 1]
+	  Position		  [980, 665, 1000, 685]
+	  BlockRotation		  270
+	  BackgroundColor	  "magenta"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "+|+"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum18"
+	  Ports			  [2, 1]
+	  Position		  [980, 770, 1000, 790]
+	  BlockRotation		  270
+	  BackgroundColor	  "magenta"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "+|+"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [2, 1]
+	  Position		  [1020, 870, 1040, 890]
+	  BlockRotation		  270
+	  BackgroundColor	  "magenta"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum6"
+	  Ports			  [2, 1]
+	  Position		  [235, 265, 255, 285]
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum8"
+	  Ports			  [3, 1]
+	  Position		  [580, 190, 600, 210]
+	  BackgroundColor	  "magenta"
+	  ShowName		  off
+	  FontSize		  14
+	  IconShape		  "round"
+	  Inputs		  "++-"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "X_TM"
+	  Ports			  [1]
+	  Position		  [1120, 239, 1150, 271]
+	  Floating		  off
+	  Location		  [45, 507, 369, 746]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "20"
+	  SaveName		  "ScopeData1"
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "lp"
+	  Ports			  [9, 8]
+	  Position		  [675, 160, 760, 390]
+	  BackgroundColor	  "red"
+	  FontSize		  14
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "lp"
+	    Location		    [13, 267, 563, 692]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "l-gnd"
+	      Position		      [60, 13, 90, 27]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "I-n"
+	      Position		      [60, 58, 90, 72]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "l-1"
+	      Position		      [60, 103, 90, 117]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "l-2"
+	      Position		      [60, 133, 90, 147]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "l-3"
+	      Position		      [60, 163, 90, 177]
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p-n"
+	      Position		      [60, 223, 90, 237]
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p-1"
+	      Position		      [60, 253, 90, 267]
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p-2"
+	      Position		      [60, 288, 90, 302]
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p-3"
+	      Position		      [60, 318, 90, 332]
+	      Port		      "9"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 10]
+	      Position		      [350, 130, 355, 205]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "10"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "LTI System"
+	      Ports		      [1, 1]
+	      Position		      [220, 152, 315, 188]
+	      SourceBlock	      "cstblocks/LTI System"
+	      SourceType	      "LTI Block"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      sys		      "lpe"
+	      IC		      "[0]"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux1"
+	      Ports		      [9, 1]
+	      Position		      [145, 115, 190, 225]
+	      ShowName		      off
+	      Inputs		      "9"
+	      DisplayOption	      "signals"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      Position		      [285, 305, 305, 325]
+	      BlockMirror	      on
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "th-3 vel"
+	      Position		      [285, 255, 305, 275]
+	      BlockMirror	      on
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x-n"
+	      Position		      [415, 48, 445, 62]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x-1"
+	      Position		      [415, 83, 445, 97]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x-2"
+	      Position		      [415, 123, 445, 137]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x-3"
+	      Position		      [415, 153, 445, 167]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "th-n"
+	      Position		      [415, 188, 445, 202]
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "th-1"
+	      Position		      [415, 223, 445, 237]
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "th-2"
+	      Position		      [415, 258, 445, 272]
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "th-3"
+	      Position		      [415, 293, 445, 307]
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Mux1"
+	      SrcPort		      1
+	      DstBlock		      "LTI System"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LTI System"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, -90]
+	      DstBlock		      "x-n"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      Points		      [15, 0; 0, -60]
+	      DstBlock		      "x-1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      Points		      [40, 0]
+	      DstBlock		      "x-2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "x-3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      5
+	      Points		      [40, 0]
+	      DstBlock		      "th-n"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      6
+	      Points		      [25, 0; 0, 60]
+	      DstBlock		      "th-1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      7
+	      Points		      [20, 0; 0, 90]
+	      DstBlock		      "th-2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      8
+	      Points		      [15, 0; 0, 120]
+	      DstBlock		      "th-3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "l-gnd"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      DstBlock		      "Mux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "I-n"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, 75]
+	      DstBlock		      "Mux1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "l-1"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 40]
+	      DstBlock		      "Mux1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "l-2"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, 20]
+	      DstBlock		      "Mux1"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "l-3"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "p-n"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, -50]
+	      DstBlock		      "Mux1"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "p-1"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -70]
+	      DstBlock		      "Mux1"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "p-2"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, -95]
+	      DstBlock		      "Mux1"
+	      DstPort		      8
+	    }
+	    Line {
+	      SrcBlock		      "p-3"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      DstBlock		      "Mux1"
+	      DstPort		      9
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      9
+	      Points		      [5, 0; 0, 130]
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      10
+	      Points		      [0, 75]
+	      DstBlock		      "th-3 vel"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "X-TM"
+	  Position		  [1010, 258, 1040, 272]
+	  DropShadow		  on
+	  FontSize		  14
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pitch"
+	  Position		  [845, 373, 875, 387]
+	  DropShadow		  on
+	  FontSize		  14
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "X-PM"
+	  Position		  [1010, 213, 1040, 227]
+	  DropShadow		  on
+	  FontSize		  14
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "X-UIM"
+	  Position		  [1010, 168, 1040, 182]
+	  DropShadow		  on
+	  FontSize		  14
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "PM Feedback Force"
+	  Position		  [395, 488, 425, 502]
+	  BlockMirror		  on
+	  DropShadow		  on
+	  FontSize		  14
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "UIM Feedback Force"
+	  Position		  [745, 78, 775, 92]
+	  DropShadow		  on
+	  FontSize		  14
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "X_RO,pm"
+	  Position		  [1050, 723, 1080, 737]
+	  DropShadow		  on
+	  FontSize		  14
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "X_RO,uim"
+	  Position		  [1035, 618, 1065, 632]
+	  DropShadow		  on
+	  FontSize		  14
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "TM Feedback Force"
+	  Position		  [380, 598, 410, 612]
+	  BlockMirror		  on
+	  DropShadow		  on
+	  FontSize		  14
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "X_RO,tm"
+	  Position		  [1085, 828, 1115, 842]
+	  DropShadow		  on
+	  FontSize		  14
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "TM Servo Output"
+	  Position		  [920, 898, 950, 912]
+	  DropShadow		  on
+	  NamePlacement		  "alternate"
+	  FontSize		  14
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "X_RO,top"
+	  Position		  [1040, 508, 1070, 522]
+	  DropShadow		  on
+	  FontSize		  14
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "TOP Feedback Force"
+	  Position		  [865, 118, 895, 132]
+	  DropShadow		  on
+	  FontSize		  14
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Sum10"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "lp"
+	  SrcPort		  5
+	  Points		  [15, 0; 0, 130; -500, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "lp"
+	  SrcPort		  1
+	  Points		  [0, -30; -415, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "LTI System"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "LTI System1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "LTI System"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pitch - Ground"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "lp"
+	  SrcPort		  4
+	  Points		  [0, 5; 35, 0]
+	  Branch {
+	    Points		    [0, 205]
+	    DstBlock		    "Optical\nSpring"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [180, 0]
+	    Branch {
+	      DstBlock		      "X-TM"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Gain2"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -10]
+	      DstBlock		      "X_TM"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "lp"
+	  SrcPort		  8
+	  DstBlock		  "pitch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "LTI System1"
+	  SrcPort		  1
+	  DstBlock		  "Gain1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "x-sensor noise"
+	  SrcPort		  1
+	  Points		  [85, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Pitch Torque on TM"
+	  SrcPort		  1
+	  Points		  [505, 0; 0, -65]
+	  DstBlock		  "lp"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "Torque to PUM"
+	  SrcPort		  1
+	  Points		  [495, 0; 0, -55]
+	  DstBlock		  "lp"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "Torque to UIM"
+	  SrcPort		  1
+	  Points		  [480, 0; 0, -45]
+	  DstBlock		  "lp"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "Force to Optic"
+	  SrcPort		  1
+	  DstBlock		  "Sum6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Optical\nSpring"
+	  SrcPort		  1
+	  Points		  [-20, 0]
+	  DstBlock		  "Sum6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Sum8"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum8"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    DstBlock		    "lp"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -75]
+	    DstBlock		    "TOP Feedback Force"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Force to TOP"
+	  SrcPort		  1
+	  Points		  [325, 0]
+	  DstBlock		  "Sum8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum10"
+	  SrcPort		  1
+	  DstBlock		  "lp"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Ptorque on Top"
+	  SrcPort		  1
+	  Points		  [350, 0]
+	  DstBlock		  "Sum10"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "lp"
+	  SrcPort		  3
+	  Points		  [0, -10]
+	  DstBlock		  "X-PM"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "lp"
+	  SrcPort		  2
+	  Points		  [10, 0; 0, -25]
+	  DstBlock		  "X-UIM"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum11"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    DstBlock		    "lp"
+	    DstPort		    4
+	  }
+	  Branch {
+	    Points		    [0, 245; -100, 0]
+	    Branch {
+	      DstBlock		      "PM Feedback Force"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 55]
+	      DstBlock		      "F_PM"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Force to PUM"
+	  SrcPort		  1
+	  DstBlock		  "Sum11"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum12"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  Branch {
+	    DstBlock		    "lp"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, -140]
+	    Branch {
+	      DstBlock		      "UIM Feedback Force"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "F_UIM"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Force to UIM"
+	  SrcPort		  1
+	  DstBlock		  "Sum12"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Beamline - Ground"
+	  SrcPort		  1
+	  Points		  [0, 10; 65, 0]
+	  Branch {
+	    Points		    [0, 25]
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "lp"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum6"
+	  SrcPort		  1
+	  DstBlock		  "Sum15"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum15"
+	  SrcPort		  1
+	  Points		  [125, 0]
+	  Branch {
+	    DstBlock		    "lp"
+	    DstPort		    5
+	  }
+	  Branch {
+	    Points		    [0, 330; -165, 0]
+	    Branch {
+	      DstBlock		      "TM Feedback Force"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 55]
+	      DstBlock		      "F_TM"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "LSC Noise Input"
+	  SrcPort		  1
+	  DstBlock		  "Sum16"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum16"
+	  SrcPort		  1
+	  DstBlock		  "Sum13"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Step"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  DstBlock		  "Sum16"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum13"
+	  SrcPort		  1
+	  DstBlock		  "Gain6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  DstBlock		  "Sum13"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  Points		  [0, -30]
+	  Branch {
+	    DstBlock		    "LTI System5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "X_RO,tm"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "OL TM Servo"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain6"
+	  SrcPort		  1
+	  Points		  [0, 10; 230, 0; 0, 420]
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum18"
+	  SrcPort		  1
+	  Points		  [0, -35]
+	  Branch {
+	    DstBlock		    "LTI System7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "X_RO,pm"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "OL PM Servo"
+	  SrcPort		  1
+	  DstBlock		  "Sum18"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum17"
+	  SrcPort		  1
+	  Points		  [0, -35]
+	  Branch {
+	    DstBlock		    "LTI System3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "X_RO,uim"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "OL UIM Servo"
+	  SrcPort		  1
+	  DstBlock		  "Sum17"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [1, 0]
+	  SrcBlock		  "Sum14"
+	  SrcPort		  1
+	  Points		  [0, -30]
+	  Branch {
+	    DstBlock		    "LTI System2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "X_RO,top"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "OL TOP Servo"
+	  SrcPort		  1
+	  DstBlock		  "Sum14"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain5"
+	  SrcPort		  1
+	  DstBlock		  "LTI System11"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "LTI System7"
+	  SrcPort		  1
+	  Points		  [-15, 0]
+	  Branch {
+	    DstBlock		    "Gain5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain7"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "LTI System11"
+	  SrcPort		  1
+	  Points		  [-190, 0]
+	  DstBlock		  "Sum11"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "LTI System10"
+	  SrcPort		  1
+	  Points		  [-170, 0]
+	  DstBlock		  "Sum12"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain4"
+	  SrcPort		  1
+	  DstBlock		  "LTI System10"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "LTI System9"
+	  SrcPort		  1
+	  Points		  [-125, 0]
+	  DstBlock		  "Sum8"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "LTI System5"
+	  SrcPort		  1
+	  Points		  [-10, 0]
+	  Branch {
+	    DstBlock		    "Gain9"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain8"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 70]
+	    DstBlock		    "TM Servo Output"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain9"
+	  SrcPort		  1
+	  DstBlock		  "LTI System4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "LTI System4"
+	  SrcPort		  1
+	  Points		  [-225, 0]
+	  DstBlock		  "Sum15"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "LTI System3"
+	  SrcPort		  1
+	  Points		  [-15, 0]
+	  Branch {
+	    DstBlock		    "Gain4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -65]
+	    DstBlock		    "Gain10"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "LTI System2"
+	  SrcPort		  1
+	  DstBlock		  "Gain3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain3"
+	  SrcPort		  1
+	  DstBlock		  "LTI System9"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain7"
+	  SrcPort		  1
+	  DstBlock		  "Sum17"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain8"
+	  SrcPort		  1
+	  DstBlock		  "Sum18"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain10"
+	  SrcPort		  1
+	  DstBlock		  "Sum14"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "aLIGO Quad Pendulum Simullink Model\nwith ALS Feedback\n(original  R. Adhikari)"
+	  Position		  [237, 50]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "magenta"
+	  FontSize		  18
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "RF Source"
+      Position		      [440, 335, 480, 355]
+      Value		      "79.4e6"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "RF Source1"
+      Position		      [580, 835, 620, 855]
+      Value		      "79.4e6"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "RF Source2"
+      Position		      [470, 455, 520, 475]
+      Value		      "2*79.4e6"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "RF Source3"
+      Position		      [365, 1605, 405, 1625]
+      Value		      "79.4e6"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "RF Source4"
+      Position		      [890, 1700, 930, 1720]
+      Value		      "79.4e6"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Reference Cavity\nPDH Detection"
+      Ports		      [2, 1]
+      Position		      [962, 275, 993, 305]
+      BlockRotation	      270
+      ForegroundColor	      "blue"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Reference Cavity\nTransmission"
+      Ports		      [2, 1]
+      Position		      [1005, 377, 1035, 408]
+      ForegroundColor	      "red"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "SHGx"
+      Position		      [960, 670, 990, 700]
+      ForegroundColor	      "green"
+      Gain		      "2"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      ParameterDataType	      "fixdt(1, 16)"
+      ParameterScaling	      "2^0"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Servo Switch"
+      Position		      [685, 175, 760, 195]
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      Value		      "FSSengaged"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Servo Switch1"
+      Position		      [570, 1034, 655, 1056]
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      Value		      "TTFSSengaged"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Servo Switch2"
+      Position		      [585, 1155, 660, 1175]
+      BlockMirror	      on
+      Value		      "PDHengaged"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Servo Switch3"
+      Position		      [150, 1465, 225, 1485]
+      Value		      "COMMengaged"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Servo Switch4"
+      Position		      [1760, 1835, 1835, 1855]
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      Value		      "DIFFengaged"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1]
+      Position		      [385, 1005, 405, 1025]
+      BlockRotation	      270
+      ForegroundColor	      "magenta"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "+|+"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Ports		      [2, 1]
+      Position		      [445, 1095, 465, 1115]
+      BlockRotation	      270
+      ForegroundColor	      "magenta"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "+|+"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [2, 1]
+      Position		      [770, 1085, 790, 1105]
+      BlockMirror	      on
+      ForegroundColor	      "blue"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "++|"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum3"
+      Ports		      [2, 1]
+      Position		      [435, 1445, 455, 1465]
+      BlockMirror	      on
+      ForegroundColor	      "blue"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|++"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum4"
+      Ports		      [2, 1]
+      Position		      [235, 1335, 255, 1355]
+      BlockRotation	      270
+      ForegroundColor	      "magenta"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "++|"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum5"
+      Ports		      [2, 1]
+      Position		      [555, 220, 575, 240]
+      BlockMirror	      on
+      ForegroundColor	      "magenta"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "++|"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum6"
+      Ports		      [2, 1]
+      Position		      [1525, 1740, 1545, 1760]
+      ForegroundColor	      "blue"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "++|"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum7"
+      Ports		      [2, 1]
+      Position		      [900, 210, 920, 230]
+      BlockMirror	      on
+      ForegroundColor	      "blue"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "++|"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum8"
+      Ports		      [2, 1]
+      Position		      [1860, 1750, 1880, 1770]
+      ForegroundColor	      "magenta"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "++|"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Switch
+      Name		      "Switch"
+      Position		      [605, 215, 635, 245]
+      BlockMirror	      on
+      ForegroundColor	      "magenta"
+      Threshold		      "1"
+      InputSameDT	      off
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Switch
+      Name		      "Switch1"
+      Position		      [490, 1000, 520, 1030]
+      BlockMirror	      on
+      ForegroundColor	      "magenta"
+      Threshold		      "1"
+      InputSameDT	      off
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Switch
+      Name		      "Switch2"
+      Position		      [490, 1090, 520, 1120]
+      BlockMirror	      on
+      ForegroundColor	      "magenta"
+      Threshold		      "1"
+      InputSameDT	      off
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Switch
+      Name		      "Switch3"
+      Position		      [230, 1400, 260, 1430]
+      BlockRotation	      270
+      ForegroundColor	      "magenta"
+      NamePlacement	      "alternate"
+      Threshold		      "1"
+      InputSameDT	      off
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Switch
+      Name		      "Switch4"
+      Position		      [1790, 1745, 1820, 1775]
+      ForegroundColor	      "magenta"
+      NamePlacement	      "alternate"
+      Threshold		      "1"
+      InputSameDT	      off
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "TTFSS Demodulation"
+      Ports		      [2, 1]
+      Position		      [1125, 772, 1155, 803]
+      ForegroundColor	      "blue"
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "TTFSS Servo"
+      Ports		      [1, 1]
+      Position		      [660, 988, 765, 1022]
+      BlockMirror	      on
+      ForegroundColor	      "magenta"
+      BackgroundColor	      "gray"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sys		      "TTFSS_Servo"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "TTFSS Test"
+      Ports		      [2, 1]
+      Position		      [1210, 990, 1240, 1020]
+      BlockMirror	      on
+      ForegroundColor	      "blue"
+      IconShape		      "round"
+      Inputs		      "++|"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "adder"
+      Ports		      [2, 1]
+      Position		      [560, 752, 580, 783]
+      ForegroundColor	      "red"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "adder1"
+      Ports		      [3, 1]
+      Position		      [500, 380, 530, 400]
+      ForegroundColor	      "yellow"
+      IconShape		      "round"
+      Inputs		      "+++"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "adder2"
+      Ports		      [3, 1]
+      Position		      [640, 880, 670, 900]
+      ForegroundColor	      "yellow"
+      IconShape		      "round"
+      Inputs		      "+++"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "adder3"
+      Ports		      [3, 1]
+      Position		      [540, 500, 570, 520]
+      ForegroundColor	      "yellow"
+      IconShape		      "round"
+      Inputs		      "+++"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "adder4"
+      Ports		      [2, 1]
+      Position		      [440, 875, 470, 905]
+      ForegroundColor	      "magenta"
+      NamePlacement	      "alternate"
+      IconShape		      "round"
+      Inputs		      "|++"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "adder5"
+      Ports		      [3, 1]
+      Position		      [425, 1650, 455, 1670]
+      ForegroundColor	      "yellow"
+      IconShape		      "round"
+      Inputs		      "+++"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "adder6"
+      Ports		      [2, 1]
+      Position		      [230, 375, 260, 405]
+      ForegroundColor	      "magenta"
+      NamePlacement	      "alternate"
+      IconShape		      "round"
+      Inputs		      "|+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "adder7"
+      Ports		      [3, 1]
+      Position		      [950, 1745, 980, 1765]
+      ForegroundColor	      "yellow"
+      IconShape		      "round"
+      Inputs		      "+++"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "adder8"
+      Ports		      [2, 1]
+      Position		      [325, 80, 355, 110]
+      ForegroundColor	      "red"
+      NamePlacement	      "alternate"
+      IconShape		      "round"
+      Inputs		      "|++"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "adder9"
+      Ports		      [2, 1]
+      Position		      [930, 1505, 950, 1525]
+      ForegroundColor	      "green"
+      IconShape		      "round"
+      Inputs		      "++|"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conversion from\narm length fluctuations\nto frequency fluctuations"
+      Position		      [1465, 1264, 1555, 1326]
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      Gain		      "nu_IR/L_arm"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      ParameterDataType	      "fixdt(1, 16)"
+      ParameterScaling	      "2^0"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "ex PZT actuator"
+      Position		      [420, 776, 520, 814]
+      Gain		      "uPZT_local"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      ParameterDataType	      "fixdt(1, 16)"
+      ParameterScaling	      "2^0"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_GRN_psl"
+      Position		      [1430, 98, 1460, 112]
+      BackgroundColor	      "red"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_IR_fiber"
+      Position		      [1430, 398, 1460, 412]
+      BackgroundColor	      "red"
+      Port		      "2"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "TTFSS error signal"
+      Position		      [1550, 783, 1580, 797]
+      BackgroundColor	      "red"
+      Port		      "3"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_IR_ex_offset"
+      Position		      [636, 720, 654, 735]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "4"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "TTFSS Feedback"
+      Position		      [305, 788, 335, 802]
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      Port		      "5"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "TTFSS error signal1"
+      Position		      [1026, 965, 1044, 980]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      Port		      "6"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_GRN_ex"
+      Position		      [1535, 678, 1565, 692]
+      BackgroundColor	      "red"
+      Port		      "7"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "PDH Feedback"
+      Position		      [380, 1053, 410, 1067]
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      Port		      "8"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "PDH error signal2"
+      Position		      [731, 1130, 749, 1145]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "9"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "PDH error signal1"
+      Position		      [811, 1125, 829, 1140]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      Port		      "10"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Comm Mode error signal2"
+      Position		      [406, 1390, 424, 1405]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "11"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Comm Mode Feedback"
+      Position		      [180, 1276, 195, 1294]
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      Port		      "12"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Comm Mode error signal1"
+      Position		      [481, 1530, 499, 1545]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      Port		      "13"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Error Siganl Diff ETM feedback"
+      Position		      [1560, 1838, 1590, 1852]
+      BackgroundColor	      "red"
+      Port		      "14"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Feedback to ETMx"
+      Position		      [2105, 1673, 2135, 1687]
+      BackgroundColor	      "red"
+      Port		      "15"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Feedback to ETMy"
+      Position		      [2095, 1848, 2125, 1862]
+      BackgroundColor	      "red"
+      Port		      "16"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Diff ETMx error signal2"
+      Position		      [1556, 1800, 1574, 1815]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      Port		      "17"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Diff ETMx error signal1"
+      Position		      [1471, 1660, 1489, 1675]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "18"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Diff ETMx Feedback"
+      Position		      [2016, 1340, 2034, 1355]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "19"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "FSS Feedback1"
+      Position		      [532, 270, 548, 285]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "20"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "FSS error signal3"
+      Position		      [856, 260, 874, 275]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "21"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "FSS error signal4"
+      Position		      [1020, 211, 1035, 229]
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "22"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Feedback to ETMs"
+      Position		      [1960, 1753, 1990, 1767]
+      BackgroundColor	      "red"
+      Port		      "23"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "TM displacement"
+      Position		      [1591, 1055, 1609, 1070]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      Port		      "24"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Arm Cavity Frequeny Fluctuation1"
+      Position		      [1421, 1345, 1439, 1360]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      Port		      "25"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Arm Cavity Frequeny Fluctuation2"
+      Position		      [1276, 1345, 1294, 1360]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "26"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "0.5*f_VCO,EX"
+      Position		      [861, 850, 879, 865]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "27"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_VCO,EX + f_PSL"
+      Position		      [901, 725, 919, 740]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      Port		      "28"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_AOM"
+      Position		      [621, 470, 639, 485]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      Port		      "29"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_VCO,PSL"
+      Position		      [556, 330, 574, 345]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      Port		      "30"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_VCO,EX"
+      Position		      [701, 835, 719, 850]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      Port		      "31"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_VCO,COMM"
+      Position		      [700, 1651, 715, 1669]
+      BackgroundColor	      "red"
+      Port		      "32"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_VCO,DIFF"
+      Position		      [1076, 1700, 1094, 1715]
+      BlockRotation	      270
+      BackgroundColor	      "red"
+      Port		      "33"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_COMM_SHIFT"
+      Position		      [595, 1376, 610, 1394]
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "34"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_DIFF_SHIFT"
+      Position		      [1290, 1561, 1305, 1579]
+      BackgroundColor	      "red"
+      Port		      "35"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "f_ArmCav_Shift"
+      Position		      [1026, 1155, 1044, 1170]
+      BlockRotation	      270
+      BlockMirror	      on
+      BackgroundColor	      "red"
+      NamePlacement	      "alternate"
+      Port		      "36"
+      IconDisplay	      "Port number"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [0, -5]
+      DstBlock		      "Product"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Product"
+      SrcPort		      1
+      Points		      [509, 0]
+      Branch {
+	DstBlock		"f_GRN_psl"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 1285]
+	DstBlock		"Frequency To Phase\nin Fourier-space4"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Doulbe Pass\nAOM"
+      SrcPort		      1
+      DstBlock		      "FSS AOM"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "FSS AOM"
+      SrcPort		      1
+      DstBlock		      "Cavity Pole LPF\nRefCav"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Cavity Pole LPF\nRefCav"
+      SrcPort		      1
+      Points		      [0, 1; 20, -1]
+      Branch {
+	Points			[20, 1]
+	DstBlock		"Reference Cavity\nTransmission"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Reference Cavity\nPDH Detection"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Cavity Pole HPF\nRefCav"
+      SrcPort		      1
+      Points		      [37, 0; 0, -50]
+      DstBlock		      "Reference Cavity\nTransmission"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "u_AOM"
+      SrcPort		      1
+      DstBlock		      "AOM Driver at fiber launch"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Reference Cavity\nTransmission"
+      SrcPort		      1
+      DstBlock		      "ALS AOM"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ALS AOM"
+      SrcPort		      1
+      Points		      [40, 0]
+      Branch {
+	DstBlock		"f_IR_fiber"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 211; -690, 0]
+	DstBlock		"Fiber Induced\nPhase Noise"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "f_FiberNoise"
+      SrcPort		      1
+      DstBlock		      "Fiber Induced\nPhase Noise"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Constant2"
+      SrcPort		      1
+      Points		      [0, -15]
+      DstBlock		      "Divide"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "ex PZT actuator"
+      SrcPort		      1
+      Points		      [2, 0; 0, -20]
+      DstBlock		      "adder"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "TTFSS Demodulation"
+      SrcPort		      1
+      Points		      [64, 0]
+      Branch {
+	Labels			[1, 0]
+	DstBlock		"TTFSS error signal"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 194]
+	DstBlock		"TTFSS Test"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "LowNoiseVCO"
+      SrcPort		      1
+      DstBlock		      "adder1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "adder1"
+      SrcPort		      1
+      Points		      [25, 0]
+      Branch {
+	DstBlock		"Doulbe Pass\nAOM"
+	DstPort			1
+      }
+      Branch {
+	Points			[5, 0]
+	DstBlock		"f_VCO,PSL"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "RF Source"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "adder1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "RF Source1"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "adder2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "LowNoiseVCO, EX"
+      SrcPort		      1
+      DstBlock		      "adder2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "adder2"
+      SrcPort		      1
+      Points		      [35, 0]
+      Branch {
+	DstBlock		"Divide"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"f_VCO,EX"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "RF Source2"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "adder3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "AOM Driver at fiber launch"
+      SrcPort		      1
+      DstBlock		      "adder3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "adder3"
+      SrcPort		      1
+      Points		      [55, 0]
+      Branch {
+	Points			[440, 0; 0, -91]
+	DstBlock		"ALS AOM"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"f_AOM"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "adder"
+      SrcPort		      1
+      Points		      [60, 0]
+      Branch {
+	DstBlock		"f_IR_ex_offset"
+	DstPort			1
+      }
+      Branch {
+	Points			[45, 0]
+	Branch {
+	  Points		  [0, -85]
+	  DstBlock		  "SHGx"
+	  DstPort		  1
+	}
+	Branch {
+	  DstBlock		  "Optical\nHeterodyne Signal\nFiber Output + Local Laser"
+	  DstPort		  2
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "TTFSS Test"
+      SrcPort		      1
+      Points		      [-170, 0]
+      Branch {
+	DstBlock		"TTFSS Servo"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"TTFSS error signal1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "u_TTFSS_test"
+      SrcPort		      1
+      DstBlock		      "TTFSS Test"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "SHGx"
+      SrcPort		      1
+      Points		      [420, 0]
+      Branch {
+	DstBlock		"f_GRN_ex"
+	DstPort			1
+      }
+      Branch {
+	Points			[-1, 515]
+	DstBlock		"PDH Frequency\nComparison"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "PLL Test Input"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      Points		      [0, -205]
+      Branch {
+	DstBlock		"ex PZT actuator"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"TTFSS Feedback"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Cavity Pole LPF\nArmCav1"
+      SrcPort		      1
+      DstBlock		      "Arm Cavity\nTransmission"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Cavity Pole HPF\nArmCav1"
+      SrcPort		      1
+      Points		      [-15, 0; 0, -70]
+      DstBlock		      "Arm Cavity\nTransmission"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Arm Cavity\nTransmission"
+      SrcPort		      1
+      Points		      [-45, 0]
+      Branch {
+	DstBlock		"Frequency To Phase\nin Fourier-space3"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Diff Y-Arm\nResponse"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "adder4"
+      SrcPort		      1
+      DstBlock		      "LowNoiseVCO, EX"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "u_VCO_ex"
+      SrcPort		      1
+      DstBlock		      "adder4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      Points		      [1, 0; 0, -30]
+      Branch {
+	Points			[0, -140]
+	DstBlock		"adder4"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"PDH Feedback"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "PDH Test Input"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      Points		      [-25, 0]
+      Branch {
+	DstBlock		"PDH Servo"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"PDH error signal2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "u_PDH_test"
+      SrcPort		      1
+      DstBlock		      "Sum2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Frequency To Phase\nin Fourier-space3"
+      SrcPort		      1
+      Points		      [-20, 0; 0, 156]
+      Branch {
+	DstBlock		"Optical\nHeterodyne Signal\nPSL + X-arm"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 199]
+	DstBlock		"Optical\nHeterodyne Signal\nX-arm + Y-arm"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Frequency To Phase\nin Fourier-space4"
+      SrcPort		      1
+      DstBlock		      "Optical\nHeterodyne Signal\nPSL + X-arm"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "RF Source3"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "adder5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "LowNoiseVCO, Comm"
+      SrcPort		      1
+      DstBlock		      "adder5"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "adder5"
+      SrcPort		      1
+      Points		      [200, 0]
+      Branch {
+	Points			[0, -200]
+	DstBlock		"Common Mode\nDemodulation"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"f_VCO,COMM"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "u_VCO_psl"
+      SrcPort		      1
+      DstBlock		      "adder6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "adder6"
+      SrcPort		      1
+      DstBlock		      "LowNoiseVCO"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Common Mode\nDemodulation"
+      SrcPort		      1
+      DstBlock		      "Frequency To Phase\nin Fourier-space5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum3"
+      SrcPort		      1
+      Points		      [-15, 0]
+      Branch {
+	DstBlock		"Common Mode Servo"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Comm Mode error signal2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "u_CommMode_test1"
+      SrcPort		      1
+      DstBlock		      "Sum3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum4"
+      SrcPort		      1
+      Points		      [0, -45]
+      Branch {
+	DstBlock		"adder6"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"Comm Mode Feedback"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "CommMode Test Input1"
+      SrcPort		      1
+      DstBlock		      "Sum4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Comm Arm Cav Offset"
+      SrcPort		      1
+      DstBlock		      "LowNoiseVCO, Comm"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Optical\nHeterodyne Signal\nPSL + X-arm"
+      SrcPort		      1
+      Points		      [-30, 0]
+      Branch {
+	DstBlock		"Common Mode\nDemodulation"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"f_COMM_SHIFT"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Frequency To Phase\nin Fourier-space6"
+      SrcPort		      1
+      Points		      [45, 0; 0, 45]
+      DstBlock		      "Optical\nHeterodyne Signal\nX-arm + Y-arm"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "RF Source4"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "adder7"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "LowNoiseVCO, Diff"
+      SrcPort		      1
+      DstBlock		      "adder7"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "adder7"
+      SrcPort		      1
+      Points		      [100, 0]
+      Branch {
+	DstBlock		"Frequency Doubler"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"f_VCO,DIFF"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Diff Arm Cav Offset"
+      SrcPort		      1
+      DstBlock		      "LowNoiseVCO, Diff"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Optical\nHeterodyne Signal\nX-arm + Y-arm"
+      SrcPort		      1
+      Points		      [35, 0]
+      Branch {
+	Points			[0, 170]
+	DstBlock		"Differential Mode\nDemodulation1"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"f_DIFF_SHIFT"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Frequency Doubler"
+      SrcPort		      1
+      DstBlock		      "Differential Mode\nDemodulation1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "ETMy Gain"
+      SrcPort		      1
+      DstBlock		      "Feedback to ETMy"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "f_IR_ex"
+      SrcPort		      1
+      DstBlock		      "adder"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "u_Diff ETMx_test in"
+      SrcPort		      1
+      DstBlock		      "Sum6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      " Test1"
+      SrcPort		      1
+      Points		      [-25, 0]
+      Branch {
+	DstBlock		"Diff ETMx Feedback"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Quad Suspension and Feedback"
+	DstPort			12
+      }
+    }
+    Line {
+      SrcBlock		      "u_Diff ETMx_test in1"
+      SrcPort		      1
+      DstBlock		      " Test1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "PDH Frequency\nComparison"
+      SrcPort		      1
+      Points		      [-160, 0]
+      Branch {
+	DstBlock		"Cavity Pole LPF\nArmCav1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -110]
+	DstBlock		"Cavity Pole LPF\nArmCav2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "ETMx Gain"
+      SrcPort		      1
+      Points		      [65, 0]
+      Branch {
+	DstBlock		" Test1"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"Feedback to ETMx"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sum5"
+      SrcPort		      1
+      Points		      [-10, 0]
+      Branch {
+	DstBlock		"FSS Feedback1"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"PSL Frequency Actuator"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "FSS Test Input1"
+      SrcPort		      1
+      DstBlock		      "Sum5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum7"
+      SrcPort		      1
+      Points		      [0, 1; -31, 0]
+      Branch {
+	Points			[-19, 0]
+	DstBlock		"FSS Servo"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 24]
+	DstBlock		"FSS error signal3"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "u_FSS_test1"
+      SrcPort		      1
+      DstBlock		      "Sum7"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "PSL Frequency Actuator"
+      SrcPort		      1
+      Points		      [-15, 0]
+      DstBlock		      "adder8"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "adder8"
+      SrcPort		      1
+      Points		      [295, 0]
+      Branch {
+	DstBlock		"Product"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 280]
+	DstBlock		"FSS AOM"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "f_IR_psl"
+      SrcPort		      1
+      DstBlock		      "adder8"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum6"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"Diff ETMx error signal2"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Differential Mode Servo"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "u_Diff ETMx_test in2"
+      SrcPort		      1
+      DstBlock		      "Sum8"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum8"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	Points			[0, -80]
+	DstBlock		"ETMx Gain"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 95]
+	DstBlock		"ETMy Gain"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Feedback to ETMs"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Ground"
+      SrcPort		      1
+      DstBlock		      "Cavity Pole HPF\nRefCav"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      " Test2"
+      SrcPort		      1
+      Points		      [-70, 0]
+      Branch {
+	DstBlock		"Arm Cavity Frequeny Fluctuation2"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Cavity Pole HPF\nArmCav1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "GRN X-arm Cavity\nResonance Freq"
+      SrcPort		      1
+      Points		      [0, 95]
+      DstBlock		      "PDH Frequency\nComparison"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "adder9"
+      SrcPort		      1
+      DstBlock		      "Frequency To Phase\nin Fourier-space6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Y-Arm Transm itted\nGRN Frequency"
+      SrcPort		      1
+      DstBlock		      "adder9"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Diff Y-Arm\nResponse"
+      SrcPort		      1
+      DstBlock		      "adder9"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Quad Suspension and Feedback"
+      SrcPort		      1
+      Points		      [-55, 0]
+      Branch {
+	Points			[0, 185]
+	DstBlock		"conversion from\narm length fluctuations\nto frequency fluctuations"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"TM displacement"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "conversion from\narm length fluctuations\nto frequency fluctuations"
+      SrcPort		      1
+      Points		      [-30, 0]
+      Branch {
+	DstBlock		" Test2"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Arm Cavity Frequeny Fluctuation1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "GRN X-arm Cavity\nResonance Frequency"
+      SrcPort		      1
+      DstBlock		      " Test2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Reference Cavity\nPDH Detection"
+      SrcPort		      1
+      Points		      [0, -50]
+      Branch {
+	DstBlock		"Sum7"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"FSS error signal4"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "RefCav PDH Frequency Noise Input"
+      SrcPort		      1
+      Points		      [-85, 0]
+      DstBlock		      "Reference Cavity\nPDH Detection"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Arm Cavity\nTransmission1"
+      SrcPort		      1
+      Points		      [-115, 0]
+      Branch {
+	DstBlock		"Sum2"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"PDH error signal1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Cavity Pole LPF\nArmCav2"
+      SrcPort		      1
+      Points		      [-30, 0]
+      Branch {
+	DstBlock		"Arm Cavity\nTransmission1"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"f_ArmCav_Shift"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Local PDH Frequenoise Input"
+      SrcPort		      1
+      Points		      [0, 20]
+      DstBlock		      "Arm Cavity\nTransmission1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ground1"
+      SrcPort		      1
+      DstBlock		      "Switch"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Servo Switch"
+      SrcPort		      1
+      Points		      [-10, 0; 0, 45]
+      DstBlock		      "Switch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Switch"
+      SrcPort		      1
+      DstBlock		      "Sum5"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "FSS Servo"
+      SrcPort		      1
+      DstBlock		      "Switch"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Servo Switch1"
+      SrcPort		      1
+      Points		      [0, -30]
+      DstBlock		      "Switch1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "TTFSS Servo"
+      SrcPort		      1
+      DstBlock		      "Switch1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ground2"
+      SrcPort		      1
+      Points		      [0, -15]
+      DstBlock		      "Switch1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Switch1"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Servo Switch2"
+      SrcPort		      1
+      Points		      [0, -60]
+      DstBlock		      "Switch2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "PDH Servo"
+      SrcPort		      1
+      DstBlock		      "Switch2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Switch2"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Ground3"
+      SrcPort		      1
+      Points		      [0, -25]
+      DstBlock		      "Switch2"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Switch3"
+      SrcPort		      1
+      DstBlock		      "Sum4"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Common Mode Servo"
+      SrcPort		      1
+      Points		      [-35, 0]
+      DstBlock		      "Switch3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ground4"
+      SrcPort		      1
+      DstBlock		      "Switch3"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Servo Switch3"
+      SrcPort		      1
+      Points		      [15, 0]
+      DstBlock		      "Switch3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Switch4"
+      SrcPort		      1
+      DstBlock		      "Sum8"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Differential Mode Servo"
+      SrcPort		      1
+      DstBlock		      "Switch4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ground5"
+      SrcPort		      1
+      Points		      [0, -10]
+      DstBlock		      "Switch4"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Servo Switch4"
+      SrcPort		      1
+      Points		      [-15, 0; 0, -85]
+      DstBlock		      "Switch4"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Fiber Induced\nPhase Noise"
+      SrcPort		      1
+      Points		      [220, 0]
+      DstBlock		      "Optical\nHeterodyne Signal\nFiber Output + Local Laser"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Divide"
+      SrcPort		      1
+      Points		      [90, 0]
+      Branch {
+	DstBlock		"0.5*f_VCO,EX"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Frequency To Phase\nin Fourier-space8"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Optical\nHeterodyne Signal\nFiber Output + Local Laser"
+      SrcPort		      1
+      Points		      [110, 0]
+      Branch {
+	DstBlock		"f_VCO,EX + f_PSL"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 15]
+	DstBlock		"Frequency To Phase\nin Fourier-space1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Differential Mode\nDemodulation1"
+      SrcPort		      1
+      DstBlock		      "Frequency To Phase\nin Fourier-space7"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Frequency To Phase\nin Fourier-space7"
+      SrcPort		      1
+      Points		      [55, 0]
+      Branch {
+	DstBlock		"Sum6"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"Diff ETMx error signal1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 95]
+	DstBlock		"Error Siganl Diff ETM feedback"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Frequency To Phase\nin Fourier-space5"
+      SrcPort		      1
+      Points		      [-5, 0]
+      Branch {
+	DstBlock		"Sum3"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Comm Mode error signal1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Frequency To Phase\nin Fourier-space8"
+      SrcPort		      1
+      Points		      [50, 0; 0, -105]
+      DstBlock		      "TTFSS Demodulation"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Frequency To Phase\nin Fourier-space1"
+      SrcPort		      1
+      DstBlock		      "TTFSS Demodulation"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "f_VCO_ex"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "adder2"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "f_VCO_psl"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "adder1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "f_VCO_AOM"
+      SrcPort		      1
+      Points		      [25, 0]
+      DstBlock		      "adder3"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "f_VCO_comm"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "adder5"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "f_VCO_diff"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "adder7"
+      DstPort		      3
+    }
+    Annotation {
+      Name		      "PSL frequency towards\nmode cleaner [Hz]"
+      Position		      [247, 70]
+    }
+    Annotation {
+      Name		      "SHG After PMC"
+      Position		      [773, 68]
+    }
+    Annotation {
+      Name		      "f_PSL"
+      Position		      [507, 75]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "f_PSL + 2f_VCO,PSL"
+      Position		      [767, 371]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "f_AOM"
+      Position		      [732, 523]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "f_PSL + 2f_VCO,PSL - f_AOM"
+      Position		      [1212, 391]
+    }
+    Annotation {
+      Name		      "f_PSL + 2f_VCO,PSL - f_AOM"
+      Position		      [642, 601]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "f_VCO,EX"
+      Position		      [834, 912]
+    }
+    Annotation {
+      Name		      "f_EX"
+      Position		      [617, 780]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "TTFSS error signal"
+      Position		      [1254, 783]
+    }
+    Annotation {
+      Name		      "2f_PSL"
+      Position		      [1032, 86]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "end-station\nfiber output"
+      Position		      [586, 647]
+    }
+    Annotation {
+      Name		      "@40MHz"
+      Position		      [832, 779]
+    }
+    Annotation {
+      Name		      "control voltage of the VCO\ncontrolling the f_PSL [V]"
+      Position		      [143, 345]
+    }
+    Annotation {
+      Name		      "Frequency noise fo the\nAOM Driver [Hz]"
+      Position		      [318, 489]
+    }
+    Annotation {
+      Name		      "Laser frequency of the\nEnd-Staiton [Hz]"
+      Position		      [130, 736]
+    }
+    Annotation {
+      Name		      "Error signal of the\nTTFSS"
+      Position		      [1563, 769]
+    }
+    Annotation {
+      Name		      "control voltage of the VCO\ncontrolling the f_EX [V]"
+      Position		      [328, 865]
+    }
+    Annotation {
+      Name		      "2f_PSL + 4f_VCO,PSL - 2f_AOM + 2f_VCO,EX"
+      Position		      [1172, 666]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "GRN beam into\nArm Cavity"
+      Position		      [1555, 659]
+    }
+    Annotation {
+      Name		      "PDH error signal"
+      Position		      [877, 1085]
+    }
+    Annotation {
+      Name		      "2f_PSL (the green beam from the PSL)"
+      Position		      [1067, 1376]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "X-arm Transmitted GRN beam"
+      Position		      [909, 1202]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "f_VCO,C"
+      Position		      [492, 1646]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "4f_VCO,PSL - 2f_AOM + 2f_VCO,EX"
+      Position		      [573, 1343]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "Y-arm Transmitted GRN beam"
+      Position		      [1044, 1477]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "f_VCO,D"
+      Position		      [1017, 1741]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "2f_VCO,EX - 2f_VCO,EY"
+      Position		      [1312, 1540]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "X-arm Reflected GRN beam"
+      Position		      [1139, 1067]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "FSS error signal"
+      Position		      [1022, 255]
+    }
+    Annotation {
+      Name		      "Reference Cavity Reflected PDH Locking"
+      Position		      [1029, 177]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+    }
+    Annotation {
+      Name		      "Common Mode Feedback"
+      Position		      [179, 553]
+      ForegroundColor	      "green"
+    }
+    Annotation {
+      Name		      "ALS Locking Strategy - 3"
+      Position		      [1011, 28]
+      FontName		      "utopia"
+      FontSize		      48
+    }
+    Annotation {
+      Name		      "Green: 532nm light"
+      Position		      [1595, 271]
+      HorizontalAlignment     "left"
+      ForegroundColor	      "green"
+      FontName		      "utopia"
+      FontSize		      30
+    }
+    Annotation {
+      Name		      "Red: 1064nm light"
+      Position		      [1598, 307]
+      HorizontalAlignment     "left"
+      ForegroundColor	      "red"
+      FontName		      "utopia"
+      FontSize		      30
+    }
+    Annotation {
+      Name		      "Blue: error signals"
+      Position		      [1598, 345]
+      HorizontalAlignment     "left"
+      ForegroundColor	      "blue"
+      FontName		      "utopia"
+      FontSize		      30
+    }
+    Annotation {
+      Name		      "Magenta: DC control signals"
+      Position		      [1599, 379]
+      HorizontalAlignment     "left"
+      ForegroundColor	      "magenta"
+      FontName		      "utopia"
+      FontSize		      30
+    }
+    Annotation {
+      Name		      "Yellow: RF signals"
+      Position		      [1597, 413]
+      HorizontalAlignment     "left"
+      ForegroundColor	      "yellow"
+      FontName		      "utopia"
+      FontSize		      30
+    }
+    Annotation {
+      Name		      "Light Blue: 1064nm single mode fiber"
+      Position		      [1598, 450]
+      HorizontalAlignment     "left"
+      ForegroundColor	      "lightBlue"
+      FontName		      "utopia"
+      FontSize		      30
+    }
+    Annotation {
+      Name		      "Legend"
+      Position		      [1644, 230]
+      FontName		      "utopia"
+      FontSize		      30
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.1 (R2009a) dated Jan 27 2009, 18:32:29
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "ALS_freq3v3_test"
+    created		    "10-May-2010 13:07:08"
+    isLibrary		    0
+    firstTarget		    2
+    sfVersion		    71014000.000008
+  }
+  target {
+    id			    2
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}
